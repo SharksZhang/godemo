@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+
+//可以使用 select 使一个channel用于生产，一个用于控制循环退出。
+
 func main()  {
 	c := make(chan int)
 	quit := make(chan int)
