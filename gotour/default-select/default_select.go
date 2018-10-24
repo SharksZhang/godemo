@@ -8,7 +8,7 @@ import (
 /**
 1.time.Tick会返回一个管道，管道中每个固定时间写入当前时间
 2.time.After会在固定时间后在管道中写入时间
-3.记得返回死循环。
+3.记得死循环要返回。
 **/
 func main() {
 	tick := time.Tick(100 * time.Millisecond)
