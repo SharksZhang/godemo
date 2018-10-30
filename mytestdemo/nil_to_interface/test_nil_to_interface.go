@@ -7,11 +7,10 @@ import "fmt"
 
 func main()  {
 	var r reader
+	r.read()
 
-	rr, ok := r.(*testReader)
-	if ok {
+	rr := r.(*testReader)
 		fmt.Println("rr:[%v]", rr)
-	}
 }
 
 type reader interface {

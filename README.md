@@ -1,12 +1,15 @@
 ## godemo
 ### gotour
 golang.org中gotour部分的练习。
+#### method_with_pointer_and_value
+- 使用值接受者声明的方法不会改变调用者的值，使用指针接受者调用的方法会改变调用者的值。
+
 #### exercise_web_crawler
 1.如何确保主线程先不退出？
 创建一个管道，用于父协程与子协程之间的通信。在子协程完成后通知父协程。
 2.如何在多线程时保证不重复？
 创建一个全局的map，用于保存所有url是否访问过的状态。
-3.定义只使用一次的struct,单例模式的高级实现
+3.定义只使用一次的struct,单例模式的高级实现,同时，之间把sync.Mutex组合进去，可以直接调用lock方法
 
 ```
 var fetched = struct {
